@@ -11,7 +11,7 @@
 
 - Nessus Essentials
 - VMWare Workstation Player
-- Windows 10 ISO
+- MS Windows 10 ISO
 - Virtual Machine
 
 ### Operating Systems Used:
@@ -36,7 +36,7 @@
 ![Download and install Nessus](./images/download-nessus4.png)
 5. Then click next and select - Register for Nessus Essentials, then click continue. 
 ![Download and Install Nessus](./images/download-nessus5.png)
-Then provide activation code from your email. Then create username and password. Next, Nessus download plugins to finish setup.
+6. Then provide activation code from your email. Then create username and password. Next, Nessus download plugins to finish setup.
 ![Download and Install Nessus](./images/download-nessus6.png)
 ![Download and Install Nessus](./images/download-nessus7.png)
 ![Download and Install Nessus](./images/download-nessus8.png)
