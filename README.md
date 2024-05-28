@@ -25,33 +25,28 @@
 </summary>
 
 ## Prepare Nessus Vulnerability Management Scanner
-- At the Azure portal, select "OpenVAS secured and supported by HOSSTED" from the marketplace.
-![OpenVAS from marketplace ](./images/select-openvas.png)
-- Click it and select "pre-set configuration”. Select a workload environment as Dev/Test and D-Series as workload type (create new resource group, VM name, region, username and password, disable boot diagnostic as it is not necessary) and continue to Create Vitual machine runing OpenVAS
-![OpenVAS from marketplace ](./images/select-openvas2.png)
-![OpenVAS from marketplace ](./images/select-openvas3.png)
-- SSH into the VM using the public IP and manually install OpenVAS.
-![OpenVAS VM installation](./images/openvas-url0.png)
-- Ensure config files are properly setup. Otherwise, OpenVAS may not be setup correctly. To continue with manually setup run the following commands:
-```
-sudo apt update
-sudo apt upgrade -y
-sudo apt dist-upgrade -y
-sudo apt install gvm
-sudo gvm-setup
-sudo gvm-check-setup
-```
-![OpenVAS VM installation](./images/openvas-url0.png)
+1. Download and install VMWare player.
+2. Download Window 10 ISO
+3. Download, install Nessus on local machine after registering and receiving activation code.
+![Download and install Nessus](./images/download-nessus.png)
+![Download and install Nessus](./images/download-nessus1.png)
+![Download and install Nessus](./images/download-nessus2.png)
+4. Next on the installation welcome page that displays, Click connect via SSL, advanced, proceed to localhost. 
+![Download and install Nessus](./images/download-nessus3.png)
+![Download and install Nessus](./images/download-nessus4.png)
+5. Then click next and select - Register for Nessus Essentials, then click continue. 
+![Download and Install Nessus](./images/download-nessus5.png)
+Then provide activation code from your email. Then create username and password. Next, Nessus download plugins to finish setup.
+![Download and Install Nessus](./images/download-nessus6.png)
+![Download and Install Nessus](./images/download-nessus7.png)
+![Download and Install Nessus](./images/download-nessus8.png)
+![Download and Install Nessus](./images/download-nessus9.png)
+![Nessus Installation complete](./images/download-nessus10.png)
 
-- You might need to leave it for up to a day or so before logging into the web server, to make sure everything on the web server has been configured correctly. To ensure the scan files are available and up to date, you can also run ```sudo gvm-feed-update```
-- Next, use the username, password and url provided on the OpenVAS VM to access the OpenVAS portal (or use admin/admin). You can reset the password after login and check that the config files are present.
-![OpenVAS url](./images/openvas-url.png)
-![OpenVAS Config files](./images/openvas-url2.png)
 ## Create Client Virtual Machine and Make it Vulnerable
-- At the Azure portal, search for Virtual Machines and create a new Virtual Machine (Resource group: Vulnerability-Management, VM Name: Win10-Vulnerable, same region as the OpenVAS VM, Virtual Network: Same as OpenVAS, Image: Windows 10 Pro, Size: Any size with 2 vCPUs, Add Username/ password, Networking: Same Vnet as OpenVAS, then Create the VM)
+- 
 ![Vulnerable VM ](./images/vm-v.png)
-- After the VM has been created, ensure you can RDP into it with the appropriate credential. After logging in, make the VM vulnerable by
-first disabling the windows firewall (type the Wf.msc command in the search bar → click on windows defender Firewall Properties → disable domain, public and private firewall state. Select “Apply” and “Ok”.), install an old Version of firefox: Firefox Setup 97.0b5, Install an old version of VLC Player: vlc-1.1.7-win32 and install an old Version of Adobe Reader: 10. Restart the VM and leave the VM for now.
+- 
 ![OpenVAS url](./images/vm-v2.png)
 ![OpenVAS url](./images/old-software.png)
 
