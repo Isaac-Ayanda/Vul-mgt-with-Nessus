@@ -2,7 +2,7 @@
 ## Objective
 
 1. Prepare Nessus Vulnerability Management Scanner
-2. Create Client Virtual Machine and Make it Vulnerable
+2. Prepare Client Virtual Machine and Make it Vulnerable
 3. Perform Vulnerability Scan
 4. Remediate Vulnerabilities
 5. Verify Remediations and start all over from 3. till vulnerability is low or at an acceptable level.
@@ -10,7 +10,7 @@
 ### Environments and Technologies Used:
 
 - Nessus Essentials
-- VMWare Workstation Player
+- VMware Workstation Player
 - MS Windows 10 ISO
 - Virtual Machine
 
@@ -43,8 +43,8 @@
 ![Download and Install Nessus](./images/download-nessus9.png)
 ![Nessus Installation complete](./images/download-nessus10.png)
 
-## Create Client Virtual Machine and Make it Vulnerable
-- 
+## Prepare Client Virtual Machine and Make it Vulnerable
+- Install and launch VMware Workstation Player on your local machine. 
 ![Vulnerable VM ](./images/vm-v.png)
 - 
 ![OpenVAS url](./images/vm-v2.png)
