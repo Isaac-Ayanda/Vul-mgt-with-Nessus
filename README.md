@@ -44,13 +44,15 @@
 ![Nessus Installation complete](./images/download-nessus10.png)
 
 ## Prepare Client Virtual Machine and Make it Vulnerable
-- Install and launch VMware Workstation Player on your local machine. 
-![Vulnerable VM ](./images/vm-v.png)
-- 
-![OpenVAS url](./images/vm-v2.png)
+1. Install and launch VMware Workstation Player on your local machine to setup Windows 10 virtual machine. Click Player → File → New Virtual Machine → Browse then select the ISO image → Next → Add the name → disk size → Next → Customize Hardware (set Memory,CPU, Network Adaptor:Bridge (so that both VM and local machine can communicate with each other)) → Finish.
+![Setup VM ](./images/vm-v.png)
+2. As VM launches, click next and complete the installation of Windows 10 Pro accordingly, including username and password.
+![Win 10 VM Setup](./images/vm-v2.png)
+![Win 10 VM Setup](./images/vm-v3.png)
+![Win 10 VM Setup](./images/vm-v4.png)
 ![OpenVAS url](./images/old-software.png)
 
-## Configure OpenVAS to Perform First Unauthenticated Scan against our Vulnerable VM
+## Perform First Unauthenticated Scan against our Vulnerable VM
 - Login to OpenVAS → Assets → Hosts → New Host. Add the Windows client VM PRIVATE IP Address and add comment as Win10-Vulnerable. Create a New Target from the Host, name it “Azure Vulnerable VMs”. Take note of the credentials. We will add SMB credentials later.
 ![Windows Client IP](./images/windows-client.png)
 ![Unauthenticated Scan](./images/unauthenticated-scan.png)
