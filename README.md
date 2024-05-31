@@ -43,17 +43,22 @@
 ![Download and Install Nessus](./images/download-nessus9.png)
 ![Nessus Installation complete](./images/download-nessus10.png)
 
-## Prepare Client Virtual Machine and Make it Vulnerable
+## Prepare Client Virtual Machine
 1. Install and launch VMware Workstation Player on your local machine to setup Windows 10 virtual machine. Click Player → File → New Virtual Machine → Browse then select the ISO image → Next → Add the name → disk size → Next → Customize Hardware (set Memory,CPU, Network Adaptor:Bridge (so that both VM and local machine can communicate with each other)) → Finish.
 ![Setup VM ](./images/vm-v.png)
 2. As VM launches, click next and complete the installation of Windows 10 Pro accordingly, including username and password.
 ![Win 10 VM Setup](./images/vm-v2.png)
 ![Win 10 VM Setup](./images/vm-v3.png)
 ![Win 10 VM Setup](./images/vm-v4.png)
-![OpenVAS url](./images/old-software.png)
 
-## Perform First Unauthenticated Scan against our Vulnerable VM
-- Login to OpenVAS → Assets → Hosts → New Host. Add the Windows client VM PRIVATE IP Address and add comment as Win10-Vulnerable. Create a New Target from the Host, name it “Azure Vulnerable VMs”. Take note of the credentials. We will add SMB credentials later.
+
+## Perform Basic Scan against the Windows 10 VM
+1. This first basic scan is to confirm that all the setup is in order and you can get a scan result. First we locate its IP4 address by login into the VM: In the search field on the Start bar → type CMD → ipconfig. 
+![identify the IP of the Windows 10 VM](./images/ipaddress.png)
+
+2. Ping the VM from our local machine in this case; using ```ping 10.0.0.187 -t``` to confirm if we can reach it. But it timeout. We would need to disable the internal firewall.
+![Windows 10 VM timeouts](./images/iptimeouts.png)
+Nesses Essentials portal → Assets → Hosts → New Host. Add the Windows client VM PRIVATE IP Address and add comment as Win10-Vulnerable. Create a New Target from the Host, name it “Azure Vulnerable VMs”. Take note of the credentials. We will add SMB credentials later.
 ![Windows Client IP](./images/windows-client.png)
 ![Unauthenticated Scan](./images/unauthenticated-scan.png)
 ![New Target](./images/unauthenticated-scan2.png)
