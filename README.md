@@ -14,10 +14,6 @@
 - MS Windows 10 ISO
 - Virtual Machine
 
-### Operating Systems Used:
-
-- VM Windows 10 PRO (21H2)
-- VM Linux Ubuntu 20.12
 <details close>
 
 <div>
@@ -56,8 +52,12 @@
 1. This first basic scan is to confirm that all the setup is in order and you can get a scan result. First we locate its IP4 address by login into the VM: In the search field on the Start bar → type CMD → ipconfig. 
 ![identify the IP of the Windows 10 VM](./images/ipaddress.png)
 
-2. Ping the VM from our local machine in this case; using ```ping 10.0.0.187 -t``` to confirm if we can reach it. But it timeout. We would need to disable the internal firewall.
+2. Ping the VM from our local machine in this case; using ```ping 10.0.0.187 -t``` to confirm if we can reach it. But it timeouts. 
 ![Windows 10 VM timeouts](./images/iptimeouts.png)
+3. We would need to disable the internal firewall in the VM. type wf.msc in the search bar on the VM to launch the Windows defender firewall console. To disable the firewall properties we turn off the firewall state for the Domain Profile, Private Profile and Public Profile. After this, notice that the IP pinging stops timing out showing that the VM is now reachable.
+![Disable defender](./images/wf.msc.png)
+![Disable defender](./images/wf.msc2.png)
+![VM stops timing out](./images/VM-reachable.png)
 Nesses Essentials portal → Assets → Hosts → New Host. Add the Windows client VM PRIVATE IP Address and add comment as Win10-Vulnerable. Create a New Target from the Host, name it “Azure Vulnerable VMs”. Take note of the credentials. We will add SMB credentials later.
 ![Windows Client IP](./images/windows-client.png)
 ![Unauthenticated Scan](./images/unauthenticated-scan.png)
