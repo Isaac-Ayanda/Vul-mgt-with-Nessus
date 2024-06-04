@@ -54,12 +54,12 @@
 
 2. Ping the VM from our local machine in this case; using ```ping 10.0.0.187 -t``` to confirm if we can reach it. But it timeouts. 
 ![Windows 10 VM timeouts](./images/iptimeouts.png)
-3. We would need to disable the internal firewall in the VM. type wf.msc in the search bar on the VM to launch the Windows defender firewall console. To disable the firewall properties we turn off the firewall state for the Domain Profile, Private Profile and Public Profile. After this, notice that the IP pinging stops timing out showing that the VM is now reachable.
+3. We would need to disable the internal firewall in the VM. Type wf.msc in the search bar on the VM to launch the Windows defender firewall console. To disable the firewall properties we turn off the firewall state for the Domain Profile, Private Profile and Public Profile. After this, notice that the IP pinging stops timing out showing that the VM is now reachable.
 ![Disable defender](./images/wf.msc.png)
 ![Disable defender](./images/wf.msc2.png)
 ![VM stops timing out](./images/VM-reachable.png)
-Nesses Essentials portal → Assets → Hosts → New Host. Add the Windows client VM PRIVATE IP Address and add comment as Win10-Vulnerable. Create a New Target from the Host, name it “Azure Vulnerable VMs”. Take note of the credentials. We will add SMB credentials later.
-![Windows Client IP](./images/windows-client.png)
+4. Next perform a basic scan: At Nesses Essentials portal, click New Scan → Basic Network Scan → Hosts → New Host. Add the Windows client VM PRIVATE IP Address and add comment as Win10-Vulnerable. Create a New Target from the Host, name it “Azure Vulnerable VMs”. 
+![Basic network Scan](./images/BN-scan.png)
 ![Unauthenticated Scan](./images/unauthenticated-scan.png)
 ![New Target](./images/unauthenticated-scan2.png)
 ![Unauthenticated Scan](./images/unauthenticated-scan3.png)
