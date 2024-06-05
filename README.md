@@ -64,9 +64,10 @@
 ![Basic network Scan](./images/BN-scan3.png)
 ![Basic network Scan](./images/BN-scan4.png)
 
-5. When the scan has finished we can click on it to display the scan results. Nessus uses colours to indicate the vulnerabilty severity level. Critical, High, Medium, Low and Info. We can also click on the Vulnerability tab next to the Host tab to see more details.
+5. Explicit vulnerability is detected when credentials are used than a basic scan with no credentials. When the scan has finished we can click on it to display the scan results. Nessus uses colours to indicate the vulnerabilty severity level. Critical, High, Medium, Low and Info. We can also click on the Vulnerability tab next to the Host tab to see more details. Can can click on each vulnerable listed review the discription and implementing the solution to remidate the vulnerability.
 ![Basic Scan result](./images/BN-scan5.png)
 ![Basic Scan result](./images/BN-scan6.png)
+![Basic Scan result](./images/BN-scan7.png)
 - Create a new Task: Title the "Name" and "Comment" as “Scan - Azure Vulnerable VMs”. Select “Azure Vulnerable VMs” as Scan Targets → . Save the Task. “Start” the “Scan - Azure Vulnerable VMs” Task by clicking the play button.
 ![Unauthenticated Scan](./images/unauthenticated4.png)
 ![Unauthenticated Scan](./images/unauthenticated5.png)
