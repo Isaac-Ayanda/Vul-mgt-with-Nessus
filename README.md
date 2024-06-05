@@ -58,7 +58,7 @@
 ![Disable defender](./images/wf.msc.png)
 ![Disable defender](./images/wf.msc2.png)
 ![VM stops timing out](./images/VM-reachable.png)
-4. Next perform a basic scan to confirm that the settings are in order: At Nesses Essentials web portal, click New Scan → Basic Network Scan → Add Name (You can name it any name), Targets (add the IP of the windows 10 VM)  → Save. Click on the play button to launch the scan. When it is done click on it to display the scan details. 
+4. Next perform a basic scan to confirm that the settings are in order: At Nesses Essentials web portal, click New Scan → Basic Network Scan → Add Name (You can name it any name), Targets (add the IP of the windows 10 VM)  → Save. Click on the play button to launch the scan. When the scan has finished we can click on it to display the scan results. Nessus uses colours to indicate the severity level. 
 ![Basic network Scan](./images/BN-scan.png)
 ![Basic network Scan](./images/BN-scan2.png)
 ![Basic network Scan](./images/BN-scan3.png)
