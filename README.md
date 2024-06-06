@@ -73,7 +73,7 @@
 ![Basic Scan result](./images/BN-scan8.png)
 
 ## Setup the VM To Accept Authenticated Scans and rescan after providing credentials to Nessus
-- Next, we setup Nessus our virtual machine Go to Configuration → Credentials → New Credential. Name / Comment → “Azure VM Credentials”. Allow Insecure Use: Yes. Username: azureuser. Password: Cyberlab123!, Save. Go to Configuration → Targets → CLONE the Target we made before. NEW Name / Comment: “Azure Vulnerable VMs - Credentialed Scan”.
+- Next, we goto to the VM and launch the service.  Go to Configuration → Credentials → New Credential. Name / Comment → “Azure VM Credentials”. Allow Insecure Use: Yes. Username: azureuser. Password: Cyberlab123!, Save. Go to Configuration → Targets → CLONE the Target we made before. NEW Name / Comment: “Azure Vulnerable VMs - Credentialed Scan”.
 - Create a new Task: Title the "Name" and "Comment" as “Scan - Azure Vulnerable VMs”. Select “Azure Vulnerable VMs” as Scan Targets → . Save the Task. “Start” the “Scan - Azure Vulnerable VMs” Task by clicking the play button.
 ![Unauthenticated Scan](./images/unauthenticated4.png)
 ![Unauthenticated Scan](./images/unauthenticated5.png)
