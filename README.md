@@ -66,19 +66,19 @@
 ![Basic network Scan](./images/BN-scan3.png)
 ![Basic network Scan](./images/BN-scan4.png)
 
-5. Explicit vulnerability is detected when credentials are used than a basic scan with no credentials. When the scan has finished we can click on it to display the scan results. Nessus uses colours to indicate the vulnerabilty severity level. Critical, High, Medium, Low and Info. We can also click on the Vulnerability tab next to the Host tab to see more details. We can click on each vulnerable listed, review the description and implement the suggested solution to remediate the vulnerability. Clicking the 'Target Credential Status...', from the description and output, we see that Nessus detected SMB on port 445 but no credentials were provided. SMB local checks were not enabled.
+5. Further vulnerabilities are detected when credentials are used than the basic scan with no credentials. When the scan has finished we can click on it to display the scan results. Nessus uses colours to indicate the vulnerabilty severity level. Critical, High, Medium, Low and Info. We can also click on the Vulnerability tab next to the Host tab to see more details. We can click on each result listed, review the description and implement the suggested solution to remediate the vulnerability. Clicking the 'Target Credential Status...', from the description and output, we see that Nessus detected SMB on port 445 but no credentials were provided. SMB local checks were not enabled.
 ![Basic Scan result](./images/BN-scan5.png)
 ![Basic Scan result](./images/BN-scan6.png)
 ![Basic Scan result](./images/BN-scan7.png)
 ![Basic Scan result](./images/BN-scan8.png)
 
-## Setup the VM To Accept Authenticated Scans and rescan after providing credentials to Nessus
-- Next, we goto to the VM and launch the service.  Go to Configuration → Credentials → New Credential. Name / Comment → “Azure VM Credentials”. Allow Insecure Use: Yes. Username: azureuser. Password: Cyberlab123!, Save. Go to Configuration → Targets → CLONE the Target we made before. NEW Name / Comment: “Azure Vulnerable VMs - Credentialed Scan”.
-- Create a new Task: Title the "Name" and "Comment" as “Scan - Azure Vulnerable VMs”. Select “Azure Vulnerable VMs” as Scan Targets → . Save the Task. “Start” the “Scan - Azure Vulnerable VMs” Task by clicking the play button.
-![Unauthenticated Scan](./images/unauthenticated4.png)
-![Unauthenticated Scan](./images/unauthenticated5.png)
+## Setup the VM To Accept Authenticated Scans
+1. Next, we goto to the VM and launch the Services pane by typing services in the search bar.  Enable Remote Registry and turn it on (this will allow the scanner to connet to the VM registry and crawl to look for insecure registry): Double click on it → Start Type: Automatic → Apply/Start → OK.
+![Launch services window on VM](./images/services.png)
+![enable remote registry](./images/enable-rr.png)
+[enable remote registry](./images/enable-rr2.png)
 
-## Execute Credentialed Scan against our Vulnerable Windows VM
+## Perform Vulnerability Scan after providing credentials to Nessus
 - Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
 Name / Comment → “Scan - Azure Vulnerable VMs - Credentialed”, Targets: Azure Vulnerable VMs - Credentialed Scan
 Save, Click the Play button to launch the new Credentialed Scan, wait for it to finish, It will take longer than the last one. Wait for it to finish, After the credentialed scan finishes, you can immediately see the difference in findings: 
