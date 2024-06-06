@@ -7,7 +7,7 @@
 - Setup the VM To Accept Authenticated Scans 
 - Perform Vulnerability Scan after providing credentials to Nessus
 - Compare and Remediate Vulnerabilities
-- Verify remediations and start all over from 5. till vulnerabilities report is low or at an acceptable level.
+- Verify Remediations
 
 ### Environments and Technologies Used:
 
@@ -86,11 +86,16 @@
 Name / Comment → “Scan - Azure Vulnerable VMs - Credentialed”, Targets: Azure Vulnerable VMs - Credentialed Scan
 Save, Click the Play button to launch the new Credentialed Scan, wait for it to finish, It will take longer than the last one. Wait for it to finish, After the credentialed scan finishes, you can immediately see the difference in findings: 
 
+## Compare and Remediate Vulnerabilities
 - Check SMB Login under “Results”
 Further inspect the individual vulnerabilities and see all the Criticals from the out-of-date FireFox
 Remove the Filter (upper right)
 
-## Remediate Vulnerabilities & Verify
+## Verify Remediation
 - Log back into your Win10-Vulnerable VM
 Uninstall Adobe Reader, VLC Player, and Firefox
 Restart the VM and Verify Remediations. 
+
+## Conclusion
+- Verify remediations and start all over from 5. till vulnerabilities report is low or at an acceptable level.
+
