@@ -58,16 +58,17 @@
 ![Disable defender](./images/wf.msc.png)
 ![Disable defender](./images/wf.msc2.png)
 ![VM stops timing out](./images/VM-reachable.png)
-4. Next perform a basic scan to confirm that the settings are in order: At Nesses Essentials web portal, click New Scan → Basic Network Scan → Add Name (You can name it any name), Targets (add the IP of the windows 10 VM)  → Save. Click on the play button to launch the scan. 
+4. Next, perform a basic scan to confirm that the settings are in order: At Nesses Essentials web portal, click New Scan → Basic Network Scan → Add Name (You can name it any name), Targets (add the IP of the windows 10 VM)  → Save. Click on the play button to launch the scan. 
 ![Basic network Scan](./images/BN-scan.png)
 ![Basic network Scan](./images/BN-scan2.png)
 ![Basic network Scan](./images/BN-scan3.png)
 ![Basic network Scan](./images/BN-scan4.png)
 
-5. Explicit vulnerability is detected when credentials are used than a basic scan with no credentials. When the scan has finished we can click on it to display the scan results. Nessus uses colours to indicate the vulnerabilty severity level. Critical, High, Medium, Low and Info. We can also click on the Vulnerability tab next to the Host tab to see more details. Can can click on each vulnerable listed review the discription and implementing the solution to remidate the vulnerability.
+5. Explicit vulnerability is detected when credentials are used than a basic scan with no credentials. When the scan has finished we can click on it to display the scan results. Nessus uses colours to indicate the vulnerabilty severity level. Critical, High, Medium, Low and Info. We can also click on the Vulnerability tab next to the Host tab to see more details. We can click on each vulnerable listed, review the description and implement the suggested solution to remediate the vulnerability. Clicking the 'Target Credential Status...', from the description and output, we see that Nessus detected SMB on port 445 but no credentials were provided. SMB local checks were not enabled.
 ![Basic Scan result](./images/BN-scan5.png)
 ![Basic Scan result](./images/BN-scan6.png)
 ![Basic Scan result](./images/BN-scan7.png)
+![Basic Scan result](./images/BN-scan8.png)
 - Create a new Task: Title the "Name" and "Comment" as “Scan - Azure Vulnerable VMs”. Select “Azure Vulnerable VMs” as Scan Targets → . Save the Task. “Start” the “Scan - Azure Vulnerable VMs” Task by clicking the play button.
 ![Unauthenticated Scan](./images/unauthenticated4.png)
 ![Unauthenticated Scan](./images/unauthenticated5.png)
