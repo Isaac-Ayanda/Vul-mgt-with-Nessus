@@ -78,6 +78,7 @@
 ![enable remote registry](./images/enable-rr.png)
 [enable remote registry](./images/enable-rr2.png)
 
+
 ## Perform Vulnerability Scan after providing credentials to Nessus
 - Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
 Name / Comment → “Scan - Azure Vulnerable VMs - Credentialed”, Targets: Azure Vulnerable VMs - Credentialed Scan
