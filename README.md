@@ -4,9 +4,10 @@
 1. Prepare Nessus Vulnerability Management Scanner
 2. Prepare Client Virtual Machine
 3. Setup the VM To Accept Authenticated Scans 
-4. Perform Vulnerability Scan after providing credentials to Nessus
-5. Remediate Vulnerabilities
-6. Verify Remediations and start all over from 3. till vulnerability is low or at an acceptable level.
+4. Perform Basic Scan against the Windows 10 VM
+5. Perform Vulnerability Scan after providing credentials to Nessus
+6. Remediate Vulnerabilities
+7. Verify Remediations and start all over from 3. till vulnerability is low or at an acceptable level.
 
 ### Environments and Technologies Used:
 
