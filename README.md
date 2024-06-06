@@ -2,10 +2,11 @@
 ## Objective
 
 1. Prepare Nessus Vulnerability Management Scanner
-2. Prepare Client Virtual Machine and Make it Vulnerable
-3. Perform Vulnerability Scan
-4. Remediate Vulnerabilities
-5. Verify Remediations and start all over from 3. till vulnerability is low or at an acceptable level.
+2. Prepare Client Virtual Machine
+3. Setup the VM To Accept Authenticated Scans and rescan after providing credentials to Nessus
+4. Perform Vulnerability Scan
+5. Remediate Vulnerabilities
+6. Verify Remediations and start all over from 3. till vulnerability is low or at an acceptable level.
 
 ### Environments and Technologies Used:
 
@@ -69,21 +70,12 @@
 ![Basic Scan result](./images/BN-scan6.png)
 ![Basic Scan result](./images/BN-scan7.png)
 ![Basic Scan result](./images/BN-scan8.png)
+
+## Setup the VM To Accept Authenticated Scans and rescan after providing credentials to Nessus
+- Next, we setup Nessus our virtual machine Go to Configuration → Credentials → New Credential. Name / Comment → “Azure VM Credentials”. Allow Insecure Use: Yes. Username: azureuser. Password: Cyberlab123!, Save. Go to Configuration → Targets → CLONE the Target we made before. NEW Name / Comment: “Azure Vulnerable VMs - Credentialed Scan”.
 - Create a new Task: Title the "Name" and "Comment" as “Scan - Azure Vulnerable VMs”. Select “Azure Vulnerable VMs” as Scan Targets → . Save the Task. “Start” the “Scan - Azure Vulnerable VMs” Task by clicking the play button.
 ![Unauthenticated Scan](./images/unauthenticated4.png)
 ![Unauthenticated Scan](./images/unauthenticated5.png)
-
-
-Take Note of the Status:
-- Once the scan is finished, click the date under “Last Report” to see the results. Take note of Tabs, specifically the “Results” tab. Even though we installed a super old version of Firefox, note that it does not show up here. Note that this is because we aren’t running a credentialed scan so the scanner could not discover it. We will configure credential scans next.
-![OpenVAS url](./images/old-software2.png)
-## Make Configurations for Credentialed Scans (Within VM)
-- Disable Windows Firewall, Disable User Account Control, Enable Remote Registry, Set Registry Key, Launch Registry Editor (regedit.exe) in “Run as administrator” mode and grant Admin Approval, if requested. Navigate to KEY_LOCAL_MACHINE hive. Open SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System key. Create a new DWORD (32-bit) value with the following properties:  Name: LocalAccountTokenFilterPolicy  Value: 1. Close Registry Editor Restart the VM.
-
-
-## Make Configurations for Credentialed Scans (OpenVAS)
-- Go to Configuration → Credentials → New Credential. Name / Comment → “Azure VM Credentials”. Allow Insecure Use: Yes. Username: azureuser. Password: Cyberlab123!, Save. Go to Configuration → Targets → CLONE the Target we made before. NEW Name / Comment: “Azure Vulnerable VMs - Credentialed Scan”. Ensure the Private IP is still accurate
-Credentials → SMB → Select the Credentials we just made: Azure VM Credentials, Save
 
 ## Execute Credentialed Scan against our Vulnerable Windows VM
 - Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
