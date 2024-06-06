@@ -73,7 +73,7 @@
 ![Basic Scan result](./images/BN-scan8.png)
 
 ## Setup the VM To Accept Authenticated Scans
-1. Next, we goto to the VM and launch the Services pane by typing services in the search bar.  Enable Remote Registry and turn it on (this will allow the scanner to connet to the VM registry and crawl to look for insecure registry): Double click on it → Start Type: Automatic → Apply/Start → OK.
+1. Next, we goto to the VM and launch the Services pane by typing services in the search bar.  Enable Remote Registry and turn it on (this will allow the scanner to connet to the VM registry and crawl to look for insecure registry information): Double click on it → Start Type: Automatic → Apply/Start → OK.
 ![Launch services window on VM](./images/services.png)
 ![enable remote registry](./images/enable-rr.png)
 ![enable remote registry](./images/enable-rr2.png)
