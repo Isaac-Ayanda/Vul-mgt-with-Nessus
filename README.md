@@ -76,7 +76,7 @@
 1. Next, we goto to the VM and launch the Services pane by typing services in the search bar.  Enable Remote Registry and turn it on (this will allow the scanner to connet to the VM registry and crawl to look for insecure registry): Double click on it → Start Type: Automatic → Apply/Start → OK.
 ![Launch services window on VM](./images/services.png)
 ![enable remote registry](./images/enable-rr.png)
-[enable remote registry](./images/enable-rr2.png)
+![enable remote registry](./images/enable-rr2.png)
 
 
 ## Perform Vulnerability Scan after providing credentials to Nessus
