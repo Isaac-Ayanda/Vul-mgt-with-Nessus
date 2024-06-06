@@ -3,8 +3,8 @@
 
 1. Prepare Nessus Vulnerability Management Scanner
 2. Prepare Client Virtual Machine
-3. Setup the VM To Accept Authenticated Scans and rescan after providing credentials to Nessus
-4. Perform Vulnerability Scan
+3. Setup the VM To Accept Authenticated Scans 
+4. Perform Vulnerability Scan after providing credentials to Nessus
 5. Remediate Vulnerabilities
 6. Verify Remediations and start all over from 3. till vulnerability is low or at an acceptable level.
 
