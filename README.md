@@ -1,13 +1,13 @@
 # Vulnerability Management Lab Project with Nessus
 ## Objective
 
-1. Prepare Nessus Vulnerability Management Scanner
-2. Prepare Client Virtual Machine
-3. Perform Basic Scan against the Windows 10 VM
-4. Setup the VM To Accept Authenticated Scans 
-5. Perform Vulnerability Scan after providing credentials to Nessus
-6. Compare and Remediate Vulnerabilities
-7. Verify remediations and start all over from 5. till vulnerabilities report is low or at an acceptable level.
+- Prepare Nessus Vulnerability Management Scanner
+- Prepare Client Virtual Machine
+- Perform Basic Scan against the Windows 10 VM
+- Setup the VM To Accept Authenticated Scans 
+- Perform Vulnerability Scan after providing credentials to Nessus
+- Compare and Remediate Vulnerabilities
+- Verify remediations and start all over from 5. till vulnerabilities report is low or at an acceptable level.
 
 ### Environments and Technologies Used:
 
@@ -21,6 +21,8 @@
 <div>
 
 </summary>
+
+#### In this lab, we make concerted efforts to scan for vulnerabilities in the system and perform remediation processes in order to lower susceptibility. <b>
 
 ## Prepare Nessus Vulnerability Management Scanner
 1. Download and install VMWare player.
