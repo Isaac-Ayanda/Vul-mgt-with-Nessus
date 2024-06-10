@@ -85,10 +85,13 @@
 ![enable file & printer sharing](./images/fandpshare.png)
 ![enable file & printer sharing](./images/fandpshare2.png)
 
-2. Disable notification under the User Account Control Settings on the VM. 
-![disable notification](./images/useraccountc.png)
-![disable notification](./images/useraccountc.png)
+3. Change notification settings to 'Never notify' in the User Account Control Settings, to disable it on the VM. 
+![change User Account Control](./images/useraccountc.png)
+![change User Account Control](./images/useraccountc2.png)
 
+4. Add a Key to the registry to further disable user account control for the remote account that will be used to connect to the computer.
+![Add a key to registry](./images/addkeytoregistry.png)
+![Add a key to registry](./images/addkeytoregistry2.png)
 ## Perform Vulnerability Scan after providing credentials to Nessus
 - Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
 Name / Comment → “Scan - Azure Vulnerable VMs - Credentialed”, Targets: Azure Vulnerable VMs - Credentialed Scan
