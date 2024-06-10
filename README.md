@@ -89,9 +89,13 @@
 ![change User Account Control](./images/useraccountc.png)
 ![change User Account Control](./images/useraccountc2.png)
 
-4. Add a Key to the registry to further disable user account control for the remote account that will be used to connect to the computer.
+4. Add a Key to the registry to further disable user account control for the remote account that will be used to connect to the computer. Go to HKEY_LOCAL_MACHINE → SOFTWARE → Microsoft → Windows → CurrentVersion → Policies → System → then create 'LocalAccountTokenFilterPolicy' and set the value to 1. Then Restart the VM.
+
 ![Add a key to registry](./images/addkeytoregistry.png)
 ![Add a key to registry](./images/addkeytoregistry2.png)
+![Add a key to registry](./images/addkeytoregistry3.png)
+![Add a key to registry](./images/addkeytoregistry4.png)
+![Add a key to registry](./images/addkeytoregistry5.png)
 ## Perform Vulnerability Scan after providing credentials to Nessus
 - Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
 Name / Comment → “Scan - Azure Vulnerable VMs - Credentialed”, Targets: Azure Vulnerable VMs - Credentialed Scan
