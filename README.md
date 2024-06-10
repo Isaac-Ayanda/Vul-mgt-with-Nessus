@@ -75,11 +75,15 @@
 ![Basic Scan result](./images/BN-scan8.png)
 
 ## Setup the VM To Accept Authenticated Scans
-1. Next, we goto to the VM and launch the Services pane by typing services in the search bar.  Enable Remote Registry and turn it on (this will allow the scanner to connet to the VM registry and crawl to look for insecure registry information): Double click on it → Start Type: Automatic → Apply/Start → OK.
+1. Next, we go to the VM and launch the Services pane by typing services in the search bar. Enable Remote Registry and turn it on (this will allow the scanner to connect to the VM registry and crawl to look for insecure configurations): Double click on it → Start Type: Automatic → Apply/Start → OK → Close services pane.
 ![Launch services window on VM](./images/services.png)
 ![enable remote registry](./images/enable-rr.png)
 ![enable remote registry](./images/enable-rr2.png)
+![remote registry enabled](./images/enable-rr3.png)
 
+2. Ensure file and printer sharing are turned on the VM. 
+![enable file & printer sharing](./images/fandpshare.png)
+![enable file & printer sharing](./images/fandpshare2.png)
 
 ## Perform Vulnerability Scan after providing credentials to Nessus
 - Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
@@ -97,5 +101,5 @@ Uninstall Adobe Reader, VLC Player, and Firefox
 Restart the VM and Verify Remediations. 
 
 ## Conclusion
-- Verify remediations and start all over from 5. till vulnerabilities report is low or at an acceptable level.
+Verify remediations and start all over from 5. till vulnerabilities report is low or at an acceptable level.
 
