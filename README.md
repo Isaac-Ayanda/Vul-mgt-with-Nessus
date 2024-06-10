@@ -85,6 +85,10 @@
 ![enable file & printer sharing](./images/fandpshare.png)
 ![enable file & printer sharing](./images/fandpshare2.png)
 
+2. Disable notification under the User Account Control Settings on the VM. 
+![disable notification](./images/useraccountc.png)
+![disable notification](./images/useraccountc.png)
+
 ## Perform Vulnerability Scan after providing credentials to Nessus
 - Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
 Name / Comment → “Scan - Azure Vulnerable VMs - Credentialed”, Targets: Azure Vulnerable VMs - Credentialed Scan
