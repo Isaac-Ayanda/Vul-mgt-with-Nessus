@@ -96,6 +96,10 @@
 ![Add a key to registry](./images/addkeytoregistry3.png)
 ![Add a key to registry](./images/addkeytoregistry4.png)
 ![Add a key to registry](./images/addkeytoregistry5.png)
+
+5. Configure the Basic scan parameters in preparation for authenticated scan.
+![Edit Basic scan](./images/editbasicscan.png)
+
 ## Perform Vulnerability Scan after providing credentials to Nessus
 - Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
 Name / Comment → “Scan - Azure Vulnerable VMs - Credentialed”, Targets: Azure Vulnerable VMs - Credentialed Scan
