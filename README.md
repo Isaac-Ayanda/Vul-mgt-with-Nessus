@@ -4,7 +4,7 @@
 - Prepare Nessus Vulnerability Management Scanner
 - Prepare Client Virtual Machine
 - Perform Basic Scan against the Windows 10 VM
-- Setup the VM To Accept Authenticated Scans 
+- Setup the VM To Accept Authenticated Scans and Install Outdated Softwares
 - Perform Vulnerability Scan after providing credentials to Nessus
 - Compare and Remediate Vulnerabilities
 - Verify Remediations
@@ -74,7 +74,7 @@
 ![Basic Scan result](./images/BN-scan7.png)
 ![Basic Scan result](./images/BN-scan8.png)
 
-## Setup the VM To Accept Authenticated Scans
+## Setup the VM To Accept Authenticated Scans and Install outdated softwares
 1. Next, we go to the VM and launch the Services pane by typing services in the search bar. Enable Remote Registry and turn it on (this will allow the scanner to connect to the VM registry and crawl to look for insecure configurations): Double click on it → Start Type: Automatic → Apply/Start → OK → Close services pane.
 ![Launch services window on VM](./images/services.png)
 ![enable remote registry](./images/enable-rr.png)
@@ -111,10 +111,11 @@
 
 
 ## Compare and Remediate Vulnerabilities
-- Check SMB Login under “Results”
-Further inspect the individual vulnerabilities and see all the Criticals from the out-of-date FireFox
-Remove the Filter (upper right)
-![the scan report](./images/scanreport.png)
+1. After Nessus has complete the scan, click on it to view the scan details. We see that from the latest scan the VM has 43 critical vulnerabilities, out of wich 42 marked as high, 9 vulerabilities marked as medium and 188 marked as info. From the foregoing we can see that credential scan allows more granular scan and enables more vulnerabilities to be discovered.
+[the scan report](./images/scanreport.png)
+
+2. Click on the Vulnerabilities tab to see the list of findings.  
+![the scan report](./images/listoffindings.png)
 
 
 ## Verify Remediation
