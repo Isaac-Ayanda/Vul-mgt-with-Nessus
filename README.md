@@ -22,7 +22,7 @@
 
 </summary>
 
-#### In this lab, we make concerted efforts to scan for vulnerabilities in the system and perform remediation processes in order to lower susceptibility. <b>
+#### In this lab, we introduce vulnerabilities to the system environment and make concerted and continous efforts to scan for vulnerabilities in the system and perform remediation processes in order to lower susceptibility. <b>
 
 ## Prepare Nessus Vulnerability Management Scanner
 1. Download and install VMWare player.
@@ -105,24 +105,32 @@
 1. Configure the last Basic scan parameters in preparation for authenticated scan. Click on Windows 10 Single Host (i.e the last scan) → Configure → Credentials → click Windows → Add Username and Password → Save. 
 ![Edit Basic scan](./images/editbasicscan.png)
 
-2. Then run the scan again. We have enable credential scanning and configured the VM to accept remote scans. It is very likely that more vulnerabilities will be identified.
+2. Then run the scan again. We have enable credential scanning and configured the VM to accept remote scans. Nessus scans the common open ports, inspect the registry, inspect the services and file systems to discover vulnerabilities.
 ![Run the scan again](./images/rundscana.png)
 ![Run the scan again](./images/rundscana2.png)
 
 
 ## Compare and Remediate Vulnerabilities
 1. After Nessus has complete the scan, click on it to view the scan details. We see that from the latest scan the VM has 43 critical vulnerabilities, out of wich 42 marked as high, 9 vulerabilities marked as medium and 188 marked as info. From the foregoing we can see that credential scan allows more granular scan and enables more vulnerabilities to be discovered.
-[the scan report](./images/scanreport.png)
+![the scan report before](./images/scanreportb.png)
+![the scan report latest](./images/scanreport.png)
 
-2. Click on the Vulnerabilities tab to see the list of findings.  
+2. Click on the Vulnerabilities tab to see the list of findings. By clicking on each we see the details and suggested steps for remidiation. We can also click on the Remidiations tab and see the high level steps to take immediate to lower the vulnerabilities, like (patching) run Windows O/S updates till there are no updates, upgrading Firefox, Adobe and VLC player to the latest version or uninstalling the softwares if they are no more being used.
 ![the scan report](./images/listoffindings.png)
+![Remidiations Actions suggested by Nessus](./images/listofremidiation.png)
 
 
 ## Verify Remediation
 - Log back into your Win10-Vulnerable VM
-Uninstall Adobe Reader, VLC Player, and Firefox
-Restart the VM and Verify Remediations. 
+Install the latest version of all softwares and restart the VM  (or uninstall the outdated software Adobe Reader, VLC Player, and Firefox). Run Windows updated over and over again, untill there are no more updates. Restart the VM and verify remediations by runing another scan via Nessus. Check the scan details, apply remidiation steps. Take these steps till vulnerabilities report is low or at an acceptable level.
+![Perform software updates](./images/adobe-update.png)
+![Uninstall unused softwares](./images/uninstall.png)
+![Perform Windows Update](./images/windows-updates.png)
+![Perform vulnerability scan again](./images/performscan.png)
+![Vulnerabiltiy low after scan](./images/performscan2.png)
+![Vulnerabiltiy scan report](./images/performscan30.png)
+![Vulnerabiltiy scan report](./images/performscan3.png)
 
 ## Conclusion
-Verify remediations and start all over from 5. till vulnerabilities report is low or at an acceptable level.
+Like in this project, vulnerability management is all about continously searching for vulnerabilities and taking remediations steps. In an organization or enterprise network, it is important to have third party/ operating systems patching setup, tested and deployed at regular intervals especially putting in place automated patching after taking the remidiation steps. Also, there will be the need to put in place standards and procedures while working with variuos departments, performing automated network and resources scans (using possibly a domain account) to continously identify and remidiate vulnerabilities, using a secured build standard updates (already remidiated) before they are applied especially to production environments.
 
