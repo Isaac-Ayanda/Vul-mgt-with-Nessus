@@ -97,7 +97,7 @@
 ![Add a key to registry](./images/addkeytoregistry4.png)
 ![Add a key to registry](./images/addkeytoregistry5.png)
 
-5. Configure the Basic scan parameters in preparation for authenticated scan.
+5. Configure the last Basic scan parameters in preparation for authenticated scan. Click on Windows 10 Single Host (i.e the last scan) → Configure → Credentials → Add Windows → Add Username and Password → Save. 
 ![Edit Basic scan](./images/editbasicscan.png)
 
 ## Perform Vulnerability Scan after providing credentials to Nessus
