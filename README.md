@@ -97,17 +97,25 @@
 ![Add a key to registry](./images/addkeytoregistry4.png)
 ![Add a key to registry](./images/addkeytoregistry5.png)
 
+5. Install outdated softwares. Like, VLC player version 1.1.7, Firefox, Adobe reader version 10
+![Install outdated softwares](./images/outdateds1.png)
+
+
 ## Perform Vulnerability Scan after providing credentials to Nessus
 1. Configure the last Basic scan parameters in preparation for authenticated scan. Click on Windows 10 Single Host (i.e the last scan) → Configure → Credentials → click Windows → Add Username and Password → Save. 
 ![Edit Basic scan](./images/editbasicscan.png)
 
-2. Then run the scan one more time.
+2. Then run the scan again. We have enable credential scanning and configured the VM to accept remote scans. It is very likely that more vulnerabilities will be identified.
 ![Run the scan again](./images/rundscana.png)
+![Run the scan again](./images/rundscana2.png)
+
 
 ## Compare and Remediate Vulnerabilities
 - Check SMB Login under “Results”
 Further inspect the individual vulnerabilities and see all the Criticals from the out-of-date FireFox
 Remove the Filter (upper right)
+![the scan report](./images/scanreport.png)
+
 
 ## Verify Remediation
 - Log back into your Win10-Vulnerable VM
