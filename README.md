@@ -97,13 +97,12 @@
 ![Add a key to registry](./images/addkeytoregistry4.png)
 ![Add a key to registry](./images/addkeytoregistry5.png)
 
-5. Configure the last Basic scan parameters in preparation for authenticated scan. Click on Windows 10 Single Host (i.e the last scan) → Configure → Credentials → Add Windows → Add Username and Password → Save. 
+## Perform Vulnerability Scan after providing credentials to Nessus
+1. Configure the last Basic scan parameters in preparation for authenticated scan. Click on Windows 10 Single Host (i.e the last scan) → Configure → Credentials → click Windows → Add Username and Password → Save. 
 ![Edit Basic scan](./images/editbasicscan.png)
 
-## Perform Vulnerability Scan after providing credentials to Nessus
-- Within Greenbone / OpenVAS, go to Scans → Tasks, CLONE the “Scan - Azure Vulnerable VMs” Task, then Edit it:
-Name / Comment → “Scan - Azure Vulnerable VMs - Credentialed”, Targets: Azure Vulnerable VMs - Credentialed Scan
-Save, Click the Play button to launch the new Credentialed Scan, wait for it to finish, It will take longer than the last one. Wait for it to finish, After the credentialed scan finishes, you can immediately see the difference in findings: 
+2. Then run the scan one more time.
+![Run the scan again](./images/rundscana.png)
 
 ## Compare and Remediate Vulnerabilities
 - Check SMB Login under “Results”
