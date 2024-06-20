@@ -1,4 +1,5 @@
 # Vulnerability Management Lab Project with Nessus
+#### In this lab, I introduce vulnerabilities to the system environment and make concerted and continous efforts to scan for vulnerabilities in the system and perform remediation processes in order to lower susceptibility. 
 ## Objective
 
 - Prepare Nessus Vulnerability Management Scanner
@@ -22,7 +23,7 @@
 
 </summary>
 
-#### In this lab, we introduce vulnerabilities to the system environment and make concerted and continous efforts to scan for vulnerabilities in the system and perform remediation processes in order to lower susceptibility. <b>
+<b>
 
 ## Prepare Nessus Vulnerability Management Scanner
 1. Download and install VMWare player.
