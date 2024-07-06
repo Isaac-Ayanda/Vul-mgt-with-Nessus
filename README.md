@@ -1,5 +1,5 @@
 # Vulnerability Management Lab Project with Nessus
-#### In this lab, I introduced vulnerabilities to the system environment and made concerted and continuous efforts to scan for vulnerabilities and performed remediation processes in order to lower susceptibility. 
+#### In this lab, I introduced unique flaws such as installing outdated softwares, left unpatched, and more in the system environment and made concerted and continuous efforts to scan for vulnerabilities and performed remediation processes in order to lower susceptibility. 
 ## Objective
 
 - Prepare Nessus Vulnerability Management Scanner
