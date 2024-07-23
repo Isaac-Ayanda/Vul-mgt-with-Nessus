@@ -1,7 +1,6 @@
 # Vulnerability Management Lab Project with Nessus
-#### In this lab, I introduced unique flaws such as installing outdated softwares, left unpatched, and more in the system environment and made concerted and continuous efforts to scan for vulnerabilities and performed remediation processes in order to lower susceptibility. 
+#### In this lab, I prepared a system environment with flaws such as installing outdated softwares on an unpatched operating system. Then made concerted and continuous efforts to scan for vulnerabilities and performed remediation processes in order to lower susceptibility. 
 ## Objective
-
 - Prepare Nessus Vulnerability Management Scanner
 - Prepare Client Virtual Machine
 - Perform Basic Scan against the Windows 10 VM
@@ -10,12 +9,11 @@
 - Compare and Remediate Vulnerabilities
 - Verify Remediations
 
-### Environments and Technologies Used:
-
+### Environments and Technologies
 - Nessus Essentials
 - VMware Workstation Player
 - MS Windows 10 ISO
-- Virtual Machine
+
 
 <details close>
 
