@@ -1,4 +1,4 @@
-# Vulnerability Management Project with Nessus
+# Vulnerability Detection and Management Lab 
 #### In this lab, I prepared a system environment with flaws such as installing outdated softwares on an unpatched operating system. Then made concerted and continuous efforts to scan for vulnerabilities and performed remediation processes in order to lower susceptibility. 
 ## Objective
 - Prepare Nessus Vulnerability Management Scanner
